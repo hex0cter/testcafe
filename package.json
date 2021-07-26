@@ -1,0 +1,11 @@
+{
+  "name": "testcafe-docker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "docker build -t hex0cter/testcafe:${TESTCAFE_VERSION:-1.13.0} --build-arg TESTCAFE_VERSION=${TESTCAFE_VERSION:-1.13.0} .",
+    "shell": "docker run --rm -it --entrypoint /bin/sh --name testcafe hex0cter/testcafe:${TESTCAFE_VERSION:-1.13.0}",
+    "push": "docker push hex0cter/testcafe:${TESTCAFE_VERSION:-1.13.0}"
+  }
+}
